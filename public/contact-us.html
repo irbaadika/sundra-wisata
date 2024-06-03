@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <section
+        id="home"
+        class="w-full min-h-screen bg-cover bg-center bg-no-repeat"
+        style="background-image: url('./assets/hero-logo.jpg')"
+      >
+        <header>
+          <nav class="flex justify-between items-center w-[89%] mx-auto py-8">
+            <div>
+              <img
+                class="cursor-pointer"
+                src="./assets/logo-warna.svg"
+                alt="logo-navbar"
+              />
+            </div>
+            <div
+              class="nav-links duration-500 md:static absolute md:min-h-fit min-h-full left-0 top-[-100%] md:w-auto w-full flex flex-col md:flex-row items-start md:items-center px-5 text-white"
+            >
+              <ul
+                class="flex flex-col md:flex-row md:justify-center md:items-center md:gap-[4vw] pt-8 md:pt-0 gap-8 text-center mx-auto"
+              >
+                <li>
+                  <a class="font-bold md:font-normal" href="index.html">Home</a>
+                </li>
+                <li>
+                  <a class="font-bold md:font-normal" href="about.html"
+                    >About</a
+                  >
+                </li>
+                <li class="relative">
+                  <p
+                    id="visi-misi-trigger"
+                    class="cursor-pointer font-bold md:font-normal"
+                  >
+                    Visi & Misi
+                  </p>
+                  <div
+                    id="visi-misi-dropdown"
+                    class="hidden absolute z-10 top-full left-0 bg-transparent mt-2 rounded-md"
+                  >
+                    <div class="flex flex-col">
+                      <a
+                        href="#visi"
+                        class="py-2 px-4 rounded-md hover:bg-white hover:bg-opacity-20 text-white"
+                        >Visi</a
+                      >
+                      <a
+                        href="#misi"
+                        class="py-2 px-4 rounded-md hover:bg-white hover:bg-opacity-20 text-white"
+                        >Misi</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a class="font-bold md:font-normal" href="contact-us.html"
+                    >Kontak Kami</a
+                  >
+                </li>
+                <div class="md:hidden flex flex-col gap-4 mt-4">
+                  <a href="register.html">
+                    <button
+                      class="bg-primary-50 text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-primary-70"
+                    >
+                      Daftar
+                    </button>
+                  </a>
+                  <a href="login.html">
+                    <button
+                      class="bg-primary-50 text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-white hover:text-primary-50"
+                    >
+                      Login Akun
+                    </button>
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <div class="hidden md:flex items-center justify-end gap-2 md:gap-6">
+              <a href="register.html">
+                <button
+                  class="text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-primary-50"
+                >
+                  Daftar
+                </button>
+              </a>
+              <a href="login.html"
+                ><button
+                  class="bg-primary-50 text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-white hover:text-primary-50"
+                >
+                  Login Akun
+                </button></a
+              >
+            </div>
+            <img
+              src="./assets/nav-open.svg"
+              onclick="onToggleMenu(this)"
+              name="menu"
+              class="text-white w-7 h-7 cursor-pointer md:hidden nav-icon"
+            />
+          </nav>
+        </header>
+        <div
+          class="w-full text-center mt-12 md:mt-24 lg:mt-32 xl:mt-48 2xl:mt-64 pb-8 px-12 md:px-32 lg:px-64"
+        >
+          <h2 class="text-4xl font-bold text-white">Contact Us</h2>
+          <p class="text-base font-normal text-white px-16">
+            Jangan pernah ragu untuk memenuhi panggilan suci ke Baitullah.
+            Karena setiap langkah menuju tanah suci adalah langkah menuju
+            ampunan dan keberkahan
+          </p>
+        </div>
+      </section>
+      <section id="form">
+        <div class="p-10 md:p-20">
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <div class="flex flex-col gap-1">
+              <label for="first_name" class="text-xs font-medium"
+                >Nama depan</label
+              >
+              <input
+                id="first_name"
+                name="first_name"
+                type="text"
+                class="min-w-[400px] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                placeholder="Masukkan nama depan"
+              />
+            </div>
+            <div class="flex flex-col gap-1">
+              <label for="last_name" class="text-xs font-medium"
+                >Nama belakang</label
+              >
+              <input
+                id="last_name"
+                name="last_name"
+                type="text"
+                class="min-w-[400px] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                placeholder="Masukkan nama belakang"
+              />
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center justify-between gap-4 mt-4">
+            <div class="flex flex-col gap-1">
+              <label for="email" class="text-xs font-medium">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="min-w-[400px] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                placeholder="Masukkan email"
+              />
+            </div>
+            <div class="flex flex-col gap-1 mt-4">
+              <label for="country_code" class="text-xs font-medium"
+                >Nomor Handphone</label
+              >
+              <div class="flex items-center min-w-[400px] w-[400px] gap-1">
+                <select
+                  id="country_code"
+                  name="country_code"
+                  type="text"
+                  class="w-[20%] px-4 py-2 text-sm bg-neutral-50 appearance-none border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                  placeholder="+62"
+                >
+                  <option value="+62" selected>+62</option>
+                  <option value="+1">+1</option>
+                  <option value="+19">+19</option>
+                </select>
+                <!-- <input
+                  id="country_code"
+                  name="country_code"
+                  type="text"
+                  class="w-[20%] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                  placeholder="+62"
+                /> -->
+                <input
+                  id="no_hp"
+                  name="no_hp"
+                  type="text"
+                  class="w-[80%] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                  placeholder="Masukkan nomor handphone"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1 mt-4">
+            <label for="subject" class="text-xs font-medium">Subject</label>
+            <input
+              id="subject"
+              name="subject"
+              type="text"
+              class="min-w-[400px] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+              placeholder="Masukkan subject"
+            />
+          </div>
+          <div class="flex flex-col gap-1 mt-4">
+            <label for="pesan" class="text-xs font-medium">Pesan</label>
+            <textarea
+              id="pesan"
+              name="pesan"
+              class="min-w-[400px] min-h-32 px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+              placeholder="Masukkan pesan"
+            ></textarea>
+          </div>
+
+          <div class="flex items-center justify-center">
+            <button
+              class="px-4 py-2 rounded-md bg-primary-50 text-sm text-white font-normal mt-8"
+            >
+              Kirim pesan anda
+            </button>
+          </div>
+        </div>
+      </section>
+      <footer id="contact-us" class="bg-primary-70 text-white">
+        <div
+          class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-16"
+        >
+          <div
+            class="flex flex-col gap-8 md:gap-0 md:flex-row flex-wrap justify-between"
+          >
+            <div>
+              <img src="./assets/logo-footer.svg" alt="logo-footer" />
+              <p class="mt-4 max-w-xs text-justify">
+                Sundra Wisata adalah salah satu unit bisnis yang dimiliki oleh
+                Pon. Pes. Sunan Drajat Lamongan yang bergerak dalam bidang jasa
+                pelayanan Ibadah Umroh & Haji serta Wisata Dalam & Luar Negeri
+              </p>
+            </div>
+            <div
+              class="grid grid-cols-1 gap-y-8 gap-x-24 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3"
+            >
+              <div>
+                <p class="font-medium">Useful links</p>
+
+                <ul class="mt-6 space-y-4 text-sm">
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Pricing</a>
+                  </li>
+
+                  <li>
+                    <a href="register.html">Get Started</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <p class="font-medium">Company</p>
+
+                <ul class="mt-6 space-y-4 text-sm">
+                  <li>
+                    <a href="contact-us.html">Contact Us</a>
+                  </li>
+
+                  <li>
+                    <a href="about.html">About Us</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Career</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <p class="font-medium">Help</p>
+
+                <ul class="mt-6 space-y-4 text-sm">
+                  <li>
+                    <a href="#">Help Support</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Privacy Policy</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Terms of Use</a>
+                  </li>
+
+                  <li>
+                    <a href="#">FAQ</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs">&copy; CV Teknologi Sunan Drajat Copyright 2024</p>
+        </div>
+      </footer>
+    </main>
+    <script>
+      // ACCORDION
+      function toggleAccordion(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.classList.toggle("hidden");
+      }
+
+      // HIDDEN NAVBAR
+      const navLinks = document.querySelector(".nav-links");
+      const menuIcon = document.querySelector(".nav-icon");
+      const buttonsContainer = document.querySelector(".md\\:hidden");
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("top-[15%]");
+        navLinks.classList.toggle("bg-transparent", e.name === "menu");
+        navLinks.classList.toggle("text-white", e.name === "menu");
+        navLinks.classList.toggle("bg-white", e.name === "close");
+        navLinks.classList.toggle("text-[#1f5c88]", e.name === "close");
+        buttonsContainer.classList.toggle("hidden", e.name === "menu");
+        if (e.name === "close") {
+          menuIcon.src = "./assets/nav-close.svg";
+        } else {
+          menuIcon.src = "./assets/nav-open.svg";
+        }
+      }
+
+      // CAROUSEL
+      const videos = [
+        "https://www.youtube.com/embed/PpneDa0oQR4?si=OMT8TyAMCH5VZWDq",
+        "https://www.youtube.com/embed/-Y0UXsmSmGY?si=KllYx1yx2Cxvxlqr",
+        "https://www.youtube.com/embed/wOHNXVENpX8?si=Uk0VIknlB8lhiHeL",
+      ];
+
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        const iframe = document.getElementById("video-frame");
+        const dots = document.getElementsByClassName("dot");
+
+        if (index >= videos.length) {
+          currentIndex = 0;
+        } else if (index < 0) {
+          currentIndex = videos.length - 1;
+        } else {
+          currentIndex = index;
+        }
+
+        iframe.src = videos[currentIndex];
+
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        dots[currentIndex].className += " active";
+      }
+
+      function currentSlide(index) {
+        showSlide(index);
+      }
+
+      showSlide(currentIndex);
+    </script>
+  </body>
+</html>

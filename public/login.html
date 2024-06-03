@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <div class="flex min-h-screen">
+        <div
+          class="hidden lg:block lg:w-1/2 xl:w-[55%] bg-blue-600 bg-cover bg-left-top bg-no-repeat"
+          style="background-image: url('./assets/login-bg.png')"
+        ></div>
+        <div
+          class="w-full lg:w-1/2 xl:w-[45%] flex flex-col items-center justify-center"
+        >
+          <p class="text-2xl font-bold text-black">
+            Selamat Datang di <span class="text-primary-50">Sundra Wisata</span>
+          </p>
+          <p class="text-lg font-light text-neutral-80 mt-2">
+            Masuk dan pilih paket yang anda inginkan
+          </p>
+          <div>
+            <div class="flex flex-col gap-1 mt-4">
+              <label for="no_hp" class="text-xs font-medium"
+                >Nomor Handphone</label
+              >
+              <div class="flex items-center min-w-[400px] gap-1">
+                <select
+                  id="country_code"
+                  name="country_code"
+                  type="text"
+                  class="w-[20%] px-4 py-2 text-sm bg-neutral-50 appearance-none border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                  placeholder="+62"
+                >
+                  <option value="+62" selected>+62</option>
+                  <option value="+1">+1</option>
+                  <option value="+19">+19</option>
+                </select>
+                <input
+                  id="no_hp"
+                  name="no_hp"
+                  type="text"
+                  class="w-[80%] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                  placeholder="Masukkan nomor handphone"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col gap-1 mt-4">
+              <label for="password" class="text-xs font-medium">Password</label>
+              <div
+                class="flex items-center min-w-[400px] px-4 py-2 bg-neutral-50 border border-neutral-60 rounded-md"
+              >
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  class="flex-grow text-sm bg-neutral-50 focus:outline-none"
+                  placeholder="Masukkan password anda"
+                />
+                <span
+                  id="togglePassword"
+                  type="button"
+                  class="cursor-pointer ml-2 text-neutral-60 focus:outline-none"
+                >
+                  <img src="./assets/eye.svg" alt="Toggle Password" />
+                </span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <div class="flex items-center">
+                <label
+                  for="toggle"
+                  class="flex items-center cursor-pointer relative"
+                >
+                  <input type="checkbox" id="toggle" class="sr-only" />
+                  <div
+                    class="toggle-bg bg-gray-200 border-2 border-gray-200 h-5 w-9 rounded-full"
+                  ></div>
+                  <span class="ml-3 text-gray-900 text-sm font-medium"></span>
+                </label>
+                <p class="text-xs">Remember me</p>
+              </div>
+              <a href="#" class="text-primary-50 text-xs">Forgot password?</a>
+            </div>
+            <button
+              class="w-full py-2 bg-primary-50 text-white text-xs font-semibold rounded-md mt-4"
+            >
+              Sign in
+            </button>
+            <div class="w-full h-[0.5px] bg-slate-300 my-8"></div>
+            <p class="text-center text-xs">
+              <span
+                >Don't have an account?
+                <a href="register.html" class="text-primary-50"
+                  >Sign up now</a
+                ></span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const togglePasswordButton = document.getElementById("togglePassword");
+      const passwordInput = document.getElementById("password");
+      const togglePasswordIcon = document.querySelector("#togglePassword img");
+
+      togglePasswordButton.addEventListener("click", function () {
+        const type =
+          passwordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordInput.setAttribute("type", type);
+
+        if (type === "password") {
+          togglePasswordIcon.src = "./assets/eye.svg";
+          togglePasswordIcon.alt = "Toggle Password";
+        } else {
+          togglePasswordIcon.src = "./assets/eye-slash.svg";
+          togglePasswordIcon.alt = "Toggle Password";
+        }
+      });
+    </script>
+  </body>
+</html>

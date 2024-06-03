@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <div class="flex min-h-screen">
+        <div
+          class="hidden lg:block lg:w-1/2 xl:w-[55%] bg-blue-600 bg-cover bg-left-top bg-no-repeat"
+          style="background-image: url('./assets/login-bg.png')"
+        ></div>
+        <div
+          class="w-full lg:w-1/2 xl:w-[45%] flex flex-col items-center justify-center my-20 mx-10"
+        >
+          <p class="text-2xl font-bold text-black">
+            Selamat Datang di <span class="text-primary-50">Sundra Wisata</span>
+          </p>
+          <p class="text-lg font-light text-neutral-80 mt-2">
+            Masuk dan pilih paket yang anda inginkan
+          </p>
+          <div>
+            <div class="flex flex-col gap-1 mt-4">
+              <label for="paket" class="text-xs font-medium">Pilih paket</label>
+              <select
+                id="paket"
+                name="paket"
+                type="text"
+                class="min-w-[400px] px-4 py-2 text-sm appearance-none bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+              >
+                <option disabled selected hidden>Pilih paket</option>
+                <option value="paket-1">Paket 1</option>
+                <option value="paket-2">Paket 2</option>
+                <option value="paket-3">Paket 3</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1 mt-4">
+              <label for="jenis" class="text-xs font-medium">Jenis</label>
+              <select
+                id="jenis"
+                name="jenis"
+                type="text"
+                class="min-w-[400px] px-4 py-2 text-sm appearance-none bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+              >
+                <option disabled selected hidden>Pilih</option>
+                <option value="jenis-1">Jenis 1</option>
+                <option value="jenis-2">Jenis 2</option>
+                <option value="jenis-3">Jenis 3</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1 mt-4">
+              <label for="nama_ortu" class="text-xs font-medium"
+                >Nama Orang Tua</label
+              >
+              <input
+                id="nama_ortu"
+                name="nama_ortu"
+                type="text"
+                class="min-w-[400px] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                placeholder="Masukkan nama orang tua"
+              />
+            </div>
+            <div class="flex flex-col gap-1 mt-4">
+              <label for="pembayaran" class="text-xs font-medium"
+                >Metode Pembayaran</label
+              >
+              <select
+                id="pembayaran"
+                name="pembayaran"
+                type="text"
+                class="min-w-[400px] px-4 py-2 text-sm appearance-none bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+              >
+                <option disabled selected hidden>Pilih pembayaran</option>
+                <option value="bca">BCA</option>
+                <option value="bri">BRI</option>
+                <option value="qris">QRIS</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1 mt-4">
+              <label for="file_upload_ktp" class="text-xs font-medium"
+                >Upload KTP</label
+              >
+              <div
+                class="flex items-center justify-between text-sm bg-neutral-50 border border-neutral-60 rounded-md px-2 py-2 hover:bg-neutral-100"
+              >
+                <input
+                  id="file_upload_ktp"
+                  name="file_upload_ktp"
+                  type="file"
+                  class="hidden"
+                  onchange="handleFileUpload('ktp')"
+                />
+                <span id="file_name_ktp" class="ml-2 text-sm text-neutral-700"
+                  >Upload KTP</span
+                >
+                <label
+                  for="file_upload_ktp"
+                  class="cursor-pointer bg-primary-50 rounded-full px-3 py-1 text-xs text-white font-medium"
+                  >Upload</label
+                >
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1 mt-4">
+              <label for="file_upload_kk" class="text-xs font-medium"
+                >Upload KK</label
+              >
+              <div
+                class="flex items-center justify-between text-sm bg-neutral-50 border border-neutral-60 rounded-md px-2 py-2 hover:bg-neutral-100"
+              >
+                <input
+                  id="file_upload_kk"
+                  name="file_upload_kk"
+                  type="file"
+                  class="hidden"
+                  onchange="handleFileUpload('kk')"
+                />
+                <span id="file_name_kk" class="ml-2 text-sm text-neutral-700"
+                  >Upload KK</span
+                >
+                <label
+                  for="file_upload_kk"
+                  class="cursor-pointer bg-primary-50 rounded-full px-3 py-1 text-xs text-white font-medium"
+                  >Upload</label
+                >
+              </div>
+            </div>
+            <div class="flex items-start mt-4">
+              <input
+                type="checkbox"
+                id="agreement"
+                class="mt-[2px] checked:bg-primary-500 checked:border-transparent checked:ring-primary-500"
+              />
+              <p class="ml-2 text-xs text-neutral-70 max-w-[90%]">
+                I have read and agree to
+                <span class="text-primary-50">the terms and conditions</span> &
+                <span class="text-primary-50">Privacy Policy</span> of Using
+                Stuntcare.
+              </p>
+            </div>
+            <button
+              class="w-full py-2 bg-primary-50 text-white text-xs font-semibold rounded-md mt-8"
+            >
+              Sign up
+            </button>
+            <div class="w-full h-[0.5px] bg-slate-300 my-8"></div>
+            <p class="text-center text-xs">
+              <span
+                >Don't have an account?
+                <a href="login.html" class="text-primary-50"
+                  >Sign in now</a
+                ></span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      function togglePasswordVisibility(buttonId, inputId, iconId) {
+        const toggleButton = document.getElementById(buttonId);
+        const passwordInput = document.getElementById(inputId);
+        const toggleIcon = document.getElementById(iconId);
+
+        toggleButton.addEventListener("click", function () {
+          const type =
+            passwordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          passwordInput.setAttribute("type", type);
+
+          // Toggle text in icon
+          toggleIcon.textContent = type === "password" ? "O" : "X";
+        });
+      }
+
+      // Initialize the toggle functionality for both password fields
+      togglePasswordVisibility(
+        "togglePassword",
+        "password",
+        "togglePasswordIcon"
+      );
+      togglePasswordVisibility(
+        "togglePassword_confirmation",
+        "password_confirmation",
+        "togglePasswordIcon_confirmation"
+      );
+    </script>
+    <script>
+      function handleFileUpload(type) {
+        const fileInput = document.getElementById(`file_upload_${type}`);
+        const fileNameSpan = document.getElementById(`file_name_${type}`);
+
+        if (fileInput.files.length > 0) {
+          fileNameSpan.textContent = fileInput.files[0].name;
+        } else {
+          fileNameSpan.textContent = `Upload ${type.toUpperCase()}`;
+        }
+      }
+    </script>
+  </body>
+</html>

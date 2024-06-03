@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <section id="home" class="w-full min-h-screen bg-cover bg-center bg-no-repeat rounded-b-[90px]" style="background-image: url('./assets/hero-logo.jpg')">
+        <header>
+          <nav class="flex justify-between items-center w-[89%] mx-auto py-8">
+            <div>
+              <img
+                class="cursor-pointer"
+                src="./assets/logo-warna.svg"
+                alt="logo-navbar"
+              />
+            </div>
+            <div
+              class="nav-links duration-500 md:static absolute md:min-h-fit min-h-full left-0 top-[-100%] md:w-auto w-full flex flex-col md:flex-row items-start md:items-center px-5 text-white"
+            >
+              <ul
+                class="flex flex-col md:flex-row md:justify-center md:items-center md:gap-[4vw] pt-8 md:pt-0 gap-8 text-center mx-auto"
+              >
+                <li>
+                  <a class="font-bold md:font-normal" href="index.html">Home</a>
+                </li>
+                <li>
+                  <a class="font-bold md:font-normal" href="about.html"
+                    >About</a
+                  >
+                </li>
+                <li class="relative">
+                  <p
+                    id="visi-misi-trigger"
+                    class="cursor-pointer font-bold md:font-normal"
+                  >
+                    Visi & Misi
+                  </p>
+                  <div
+                    id="visi-misi-dropdown"
+                    class="hidden absolute z-10 top-full left-0 bg-transparent mt-2 rounded-md"
+                  >
+                    <div class="flex flex-col">
+                      <a
+                        href="#visi"
+                        class="py-2 px-4 rounded-md hover:bg-white hover:bg-opacity-20 text-white"
+                        >Visi</a
+                      >
+                      <a
+                        href="#misi"
+                        class="py-2 px-4 rounded-md hover:bg-white hover:bg-opacity-20 text-white"
+                        >Misi</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a class="font-bold md:font-normal" href="contact-us.html"
+                    >Kontak Kami</a
+                  >
+                </li>
+                <div class="md:hidden flex flex-col gap-4 mt-4">
+                  <a href="register.html">
+                    <button
+                      class="bg-primary-50 text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-primary-70"
+                    >
+                      Daftar
+                    </button>
+                  </a>
+                  <a href="login.html">
+                    <button
+                      class="bg-primary-50 text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-white hover:text-primary-50"
+                    >
+                      Login Akun
+                    </button>
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <div class="hidden md:flex items-center justify-end gap-2 md:gap-6">
+              <button
+                class="text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-primary-50"
+              >
+                Daftar
+              </button>
+              <a href="login.html"
+                ><button
+                  class="bg-primary-50 text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-white hover:text-primary-50"
+                >
+                  Login Akun
+                </button></a
+              >
+            </div>
+            <img
+              src="./assets/nav-open.svg"
+              onclick="onToggleMenu(this)"
+              name="menu"
+              class="text-white w-7 h-7 cursor-pointer md:hidden nav-icon"
+            />
+          </nav>
+        </header>
+        <div class="w-full flex flex-col items-center justify-end mt-12 md:mt-32 lg:mt-40 xl:mt-52 2xl:mt-96 pb-8">
+          <div
+            class="flex flex-col items-center justify-center text-center gap-4 px-12 md:px-32 lg:px-64"
+          >
+            <h2 class="text-4xl font-bold text-white">
+              Travel yang memberikan anda ketenangan dan kekhusyu'an dalam
+              beribadah
+            </h2>
+            <p class="text-base font-normal text-white px-16">
+              Jangan pernah ragu untuk memenuhi panggilan suci ke Baitullah. Karena setiap langkah menuju tanah suci adalah langkah menuju ampunan dan keberkahan
+            </p>
+            <button
+              class="bg-primary-50 py-2 px-8 text-base font-bold text-white rounded-full shadow-md"
+            >
+              Gabung Sekarang Juga
+            </button>
+          </div>
+          <div
+            class="sm:w-[500px] md:w-[600px] lg:w-[944px] h-full sm:h-16 py-3 px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0 bg-white rounded-lg mt-4"
+          >
+            <div class="flex items-center justify-between gap-2">
+              <img src="./assets/hero-icon.svg" alt="hero-icon">
+              <div>
+                <p class="text-xs font-extralight text-slate-500">
+                  Pilih Paket
+                </p>
+                <!-- <p class="text-sm font-semibold text-black">Paket Umrah</p> -->
+                  <select class="cursor-pointer text-sm font-semibold text-black block appearance-none border-none hover:border-none rounded focus:outline-none focus:shadow-none">
+                      <option>Paket Umrah</option>
+                      <option>Paket B</option>
+                      <option>Paket C</option>
+                  </select>
+              </div>
+            </div>
+            <div class="flex items-center justify-between gap-2">
+              <img src="./assets/hero-icon.svg" alt="hero-icon">
+              <div>
+                <p class="text-xs font-extralight text-slate-500">Durasi</p>
+                <select class="cursor-pointer text-sm font-semibold text-black block appearance-none border-none hover:border-none rounded focus:outline-none focus:shadow-none">
+                  <option>10 Hari</option>
+                  <option>15 Hari</option>
+                  <option>20 Hari</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex items-center justify-between gap-2">
+              <img src="./assets/hero-icon.svg" alt="hero-icon">
+              <div>
+                <p class="text-xs font-extralight text-slate-500">Tanggal</p>
+                <input id="tanggal" name="tanggal" type="text" placeholder="Pilih tanggal" class="cursor-pointer w-28 p-0 text-sm font-semibold text-black focus:border-none focus:outline-none placeholder-black" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+              </div>
+            </div>
+            <div class="flex items-center justify-between gap-2">
+              <img src="./assets/hero-icon.svg" alt="hero-icon">
+              <div>
+                <p class="text-xs font-extralight text-slate-500">Jumlah</p>
+                <select class="cursor-pointer text-sm font-semibold text-black block appearance-none border-none hover:border-none rounded focus:outline-none focus:shadow-none">
+                  <option>1 Orang</option>
+                  <option>2 Orang</option>
+                  <option>3 Orang</option>
+                </select>
+              </div>
+            </div>
+            <div class="cursor-pointer bg-primary-50 w-full h-8 sm:w-12 sm:h-12 mt-2 sm:mt-0 rounded flex items-center justify-center">
+              <img src="./assets/hero-search-icon.svg" alt="hero-search-icon">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="partner">
+        <div class="py-8">
+          <div class="text-center pb-4">
+            <h3 class="text-xl font-medium text-black">Partner Maskapai</h3>
+          </div>
+          <div class="group flex space-x-2 sm:space-x-6 md:space-x-10 lg:space-x-16 overflow-hidden whitespace-nowrap">
+            <div class="group-hover:paused flex animate-loop-scroll space-x-2 sm:space-x-6 md:space-x-10 lg:space-x-16">
+              <img loading="lazy" src="./assets/partner-saudia.png" class="max-w-none" alt="Image 1" />
+              <img loading="lazy" src="./assets/partner-lion.png" class="max-w-none" alt="Image 2" />
+              <img loading="lazy" src="./assets/partner-garuda.png" class="max-w-none" alt="Image 3" />
+              <img loading="lazy" src="./assets/partner-batik.png" class="max-w-none" alt="Image 4" />
+              <img loading="lazy" src="./assets/partner-emirates.png" class="max-w-none" alt="Image 5" />
+              <img loading="lazy" src="./assets/partner-etihad.png" class="max-w-none" alt="Image 6" />
+              <img loading="lazy" src="./assets/partner-oman.png" class="max-w-none" alt="Image 7" />
+              <img loading="lazy" src="./assets/partner-qatar.png" class="max-w-none" alt="Image 8" />
+              <img loading="lazy" src="./assets/partner-turkish.png" class="max-w-none" alt="Image 9" />
+            </div>
+            <div class="group-hover:paused flex animate-loop-scroll space-x-2 sm:space-x-6 md:space-x-10 lg:space-x-16" aria-hidden="true">
+              <img loading="lazy" src="./assets/partner-saudia.png" class="max-w-none" alt="Image 1" />
+              <img loading="lazy" src="./assets/partner-lion.png" class="max-w-none" alt="Image 2" />
+              <img loading="lazy" src="./assets/partner-garuda.png" class="max-w-none" alt="Image 3" />
+              <img loading="lazy" src="./assets/partner-batik.png" class="max-w-none" alt="Image 4" />
+              <img loading="lazy" src="./assets/partner-emirates.png" class="max-w-none" alt="Image 5" />
+              <img loading="lazy" src="./assets/partner-etihad.png" class="max-w-none" alt="Image 6" />
+              <img loading="lazy" src="./assets/partner-oman.png" class="max-w-none" alt="Image 7" />
+              <img loading="lazy" src="./assets/partner-qatar.png" class="max-w-none" alt="Image 8" />
+              <img loading="lazy" src="./assets/partner-turkish.png" class="max-w-none" alt="Image 9" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="tentang-kami">
+        <div class="p-20">
+          <div class="flex flex-col md:flex-row w-full items-center justify-center">
+            <div class="w-full md:w-1/2 text-justify">
+              <p class="text-5xl font-semibold text-black">Tentang Kami</p>
+              <p class="text-5xl font-semibold text-primary-50">
+                Sundra Wisata Travel.
+              </p>
+              <p class="text-lg font-normal text-slate-500 mt-2">
+                Sundra Wisata adalah salah satu unit bisnis yang dimiliki oleh Pon. Pes. Sunan Drajat Lamongan yang bergerak dalam bidang jasa pelayanan Ibadah Umroh & Haji serta Wisata Dalam & Luar Negeri
+              </p>
+              <p class="mt-8 text-3xl font-bold text-primary-50">Visi Kami</p>
+              <p class="mt-2 text-lg font-normal text-slate-500">
+                Menjadi perusahaan wisata yang dikelola dengan manahemeng yang profesional berorientasi maslahah dunia dan akhirat
+              </p>
+              <p class="mt-8 text-3xl font-bold text-primary-50">Misi Kami</p>
+              <p class="mt-2 text-lg font-normal text-slate-500">
+                Memberikan layanan berkualitas dan bernilai tambah kepada pelanggan kami dengan memberikan pengalaman perjalanan yang sempurna dan berkesan
+              </p>
+            </div>
+            <div class="hidden md:inline-block w-1/2 h-full">
+              <div class="flex justify-end 2xl:pr-[17%] items-start">
+                <div class="relative rounded-md md:w-60 md:h-[366px] lg:w-72 lg:h-[403px] xl:w-80 xl:h-[488px] bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/about-1.jpg')">
+                  <div
+                    class="absolute rounded-md md:w-60 md:h-[366px] lg:w-72 lg:h-[403px] xl:w-80 xl:h-[488px] border-8 border-white top-1/3 -left-1/2 bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/about-2.jpg')"
+                  >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center md:inline-block">
+            <button class="mt-16 px-10 py-5 bg-primary-50 text-2xl font-normal text-white rounded-md">
+              Hubungi Kami
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="why-us">
+        <div class="p-20 flex flex-col items-center justify-center bg-[#F8F8F8]">
+          <p class="text-3xl font-bold text-black text-center">
+            Mengapa harus <span class="text-primary-50">Sundra Wisata.</span>
+          </p>
+          <p class="text-center text-lg font-normal text-[#858B91]">
+            Layanan yang kami berikan pada anda
+          </p>
+          <div class="flex flex-wrap justify-center items-center gap-14 pt-8">
+            <div class="bg-white w-80 rounded-2xl p-10">
+              <img src="./assets/why-1.svg" alt="icon-why-us">
+              <p class="text-2xl font-medium mt-8">Incentive Travel</p>
+              <p class="text-sm font-normal text-neutral-60 mt-1 mb-8">Sundra wisata mempunyai pengalaman panjang dalam menjalankan wisata insentif dan pengumpulan iuinsentif keliling dunia. Memberi anda ide menarik, biaya kompetitif, eksekusi aman dan jaminan laba atas ienvestasi anda.</p>
+              <a href="#" class="text-sm font-medium text-primary-50">Read more</a>
+            </div>
+            <div class="bg-white w-80 rounded-2xl p-10">
+              <img src="./assets/why-2.svg" alt="icon-why-us">
+              <p class="text-2xl font-medium mt-8">Incentive Travel</p>
+              <p class="text-sm font-normal text-neutral-60 mt-1 mb-8">Sundra wisata mempunyai pengalaman panjang dalam menjalankan wisata insentif dan pengumpulan iuinsentif keliling dunia. Memberi anda ide menarik, biaya kompetitif, eksekusi aman dan jaminan laba atas ienvestasi anda.</p>
+              <a href="#" class="text-sm font-medium text-primary-50">Read more</a>
+            </div>
+            <div class="bg-white w-80 rounded-2xl p-10">
+              <img src="./assets/why-3.svg" alt="icon-why-us">
+              <p class="text-2xl font-medium mt-8">Incentive Travel</p>
+              <p class="text-sm font-normal text-neutral-60 mt-1 mb-8">Sundra wisata mempunyai pengalaman panjang dalam menjalankan wisata insentif dan pengumpulan iuinsentif keliling dunia. Memberi anda ide menarik, biaya kompetitif, eksekusi aman dan jaminan laba atas ienvestasi anda.</p>
+              <a href="#" class="text-sm font-medium text-primary-50">Read more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="layanan-kami">
+        <div class="p-20 flex flex-col items-center justify-center">
+          <p class="text-3xl font-bold text-black text-center">
+            Mengapa <span class="text-primary-50">kami.</span>
+          </p>
+          <p class="text-center text-lg font-normal text-[#858B91]">
+            Alasan mengapa sundra wisata dapat menjadi pilihan anda
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+            <div class="lg:max-w-80 xl:w-80 h-80">
+              <div class="relative w-full h-48 bg-cover bg-center bg-no-repeat rounded mb-6" style="background-image: url('./assets/service-1.png')">
+                <div
+                  class="absolute flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 rounded-full left-4 -bottom-8 bg-primary-50"
+                ><img src="./assets/service-icon-1.svg" alt="service-icon" class="lg:shrink-0"></div>
+              </div>
+              <div class="p-4">
+                <p class="text-xl font-semibold text-black">
+                  Izin Resmi Kemenag
+                </p>
+                <p class="mt-2 text-sm font-normal text-black">PPIU : No.949/2019</p>
+                <p class="text-sm font-normal text-black">PIHK : No.151/2021</p>
+              </div>
+            </div>
+            <div class="lg:max-w-80 xl:w-80 h-80">
+              <div class="relative w-full h-48 bg-cover bg-center bg-no-repeat rounded mb-6" style="background-image: url('./assets/service-2.png')">
+                <div
+                  class="absolute flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 rounded-full left-4 -bottom-8 bg-primary-50"
+                ><img src="./assets/service-icon-2.svg" alt="service-icon" class="lg:shrink-0"></div>
+              </div>
+              <div class="p-4">
+                <p class="text-xl font-semibold text-black">Berpengalaman</p>
+                <p class="mt-2 text-sm font-normal text-black">
+                  Beroperasi sejak tahun 2001 dan tidak pernah bermasalah
+                </p>
+              </div>
+            </div>
+            <div class="lg:max-w-80 xl:w-80 h-80">
+              <div class="relative w-full h-48 bg-cover bg-center bg-no-repeat rounded mb-6" style="background-image: url('./assets/service-3.png')">
+                <div
+                  class="absolute flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 rounded-full left-4 -bottom-8 bg-primary-50"
+                ><img src="./assets/service-icon-3.svg" alt="service-icon" class="lg:shrink-0"></div>
+              </div>
+              <div class="p-4">
+                <p class="text-xl font-semibold text-black">Ticket Confirmed</p>
+                <p class="mt-2 text-sm font-normal text-black">
+                  Tanggal keberangkatan pasti, karena kami salah satu provider tiket pesawat
+                </p>
+              </div>
+            </div>
+            <div class="lg:max-w-80 xl:w-80 h-80">
+              <div class="relative w-full h-48 bg-cover bg-center bg-no-repeat rounded mb-6" style="background-image: url('./assets/service-4.png')">
+                <div
+                  class="absolute flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 rounded-full left-4 -bottom-8 bg-primary-50"
+                ><img src="./assets/service-icon-4.svg" alt="service-icon" class="lg:shrink-0"></div>
+              </div>
+              <div class="p-4">
+                <p class="text-xl font-semibold text-black">Hotel Confirmed</p>
+                <p class="mt-2 text-sm font-normal text-black">
+                  Hotel yang kami berikan 100% sesuai dengan gambar pada brosur.
+                </p>
+              </div>
+            </div>
+            <div class="lg:max-w-80 xl:w-80 h-80">
+              <div class="relative w-full h-48 bg-cover bg-center bg-no-repeat rounded mb-6" style="background-image: url('./assets/service-5.png')">
+                <div
+                  class="absolute flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 rounded-full left-4 -bottom-8 bg-primary-50"
+                ><img src="./assets/service-icon-5.svg" alt="service-icon" class="lg:shrink-0"></div>
+              </div>
+              <div class="p-4">
+                <p class="text-xl font-semibold text-black">Tour Leader</p>
+                <p class="mt-2 text-sm font-normal text-black">
+                  Pembimbing ibadah kami berpengalaman dan sabar.
+                </p>
+              </div>
+            </div>
+            <div class="lg:max-w-80 xl:w-80 h-80">
+              <div class="relative w-full h-48 bg-cover bg-center bg-no-repeat rounded mb-6" style="background-image: url('./assets/service-6.png')">
+                <div
+                  class="absolute flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 rounded-full left-4 -bottom-8 bg-primary-50"
+                ><img src="./assets/service-icon-6.svg" alt="service-icon" class="lg:shrink-0"></div>
+              </div>
+              <div class="p-4">
+                <p class="text-xl font-semibold text-black">
+                  Pesawat Non Transit
+                </p>
+                <p class="mt-2 text-sm font-normal text-black">
+                  Kami telah bekerja sama dengan berbagai macam maskapai ternama.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Jadwal">
+        <div class="p-6 md:p-20 flex flex-col items-center justify-center">
+          <p class="text-3xl font-bold text-black text-center">
+            Sesuaikan <span class="text-primary-50">jadwal anda.</span>
+          </p>
+          <p class="text-center text-lg font-normal text-[#858B91]">
+            Jadwal dan biaya perjalanan
+          </p>
+          <div
+            class="flex items-center justify-between gap-2 p-2 w-80 md:w-[450px] lg:w-[560px] shadow-md mt-8"
+          >
+            <button
+              class="w-44 py-2 rounded-lg text-sm md:text-lg font-medium hover:text-white hover:bg-primary-50"
+            >
+              Haji Reguler
+            </button>
+            <button
+              class="w-44 py-2 rounded-lg text-sm md:text-lg font-medium hover:text-white hover:bg-primary-50"
+            >
+              Haji Plus
+            </button>
+            <button
+              class="w-44 py-2 rounded-lg text-sm md:text-lg font-medium text-white bg-primary-50"
+            >
+              Umroh
+            </button>
+          </div>
+          <div class="overflow-x-auto w-full flex items-center lg:justify-center">
+            <div class="max-w-max flex items-center justify-start mt-4">
+              <table class="w-full table-auto text-center text-[10px] md:text-sm">
+                <thead class="bg-primary-50">
+                  <tr>
+                    <th
+                      scope="col"
+                      class="px-4 py-3 text-white text-[10px] md:text-base font-medium"
+                    >
+                      NAMA PAKET
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-4 py-3 text-white text-[10px] md:text-base font-medium"
+                    >
+                      KEBERANGKATAN
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-4 py-3 text-white text-[10px] md:text-base font-medium"
+                    >
+                      HARGA
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-4 py-3 text-white text-[10px] md:text-base font-medium"
+                    >
+                      PESAWAT
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-4 py-3 text-white text-[10px] md:text-base font-medium"
+                    >
+                      MAKKAH
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-4 py-3 text-white text-[10px] md:text-base font-medium"
+                    >
+                      MADINAH
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-4 py-3 text-white text-[10px] md:text-base font-medium"
+                    >
+                      SISA SEAT
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-4 py-3 text-white text-[10px] md:text-base font-medium"
+                    >
+                      KETERANGAN
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-slate-500">
+                    <td class="whitespace-nowrap font-semibold px-2 py-4">
+                      Umroh Reguler 20 Hari 24 Maret
+                    </td>
+                    <td class="whitespace-nowrap font-normal px-2 py-4">
+                      24 March 2024
+                    </td>
+                    <td class="whitespace-nowrap font-semibold px-2 py-4">
+                      Rp46.400.000
+                    </td>
+                    <td class="whitespace-nowrap font-normal px-2 py-4">
+                      Scoot Airlines
+                    </td>
+                    <td class="whitespace-nowrap px-2 py-4">
+                      <div class="flex items-center">
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 ms-1 text-gray-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap px-2 py-4">
+                      <div class="flex items-center">
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 ms-1 text-gray-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap font-semibold px-2 py-4">
+                      9 Seat
+                    </td>
+                    <td class="whitespace-nowrap px-2 py-4">
+                      <button
+                        class="px-3 py-1 rounded bg-primary-50 text-white"
+                      >
+                        SELENGKAPNYA
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="border-b border-slate-500">
+                    <td class="whitespace-nowrap font-semibold px-2 py-4">
+                      Umroh Reguler 20 Hari 24 Maret
+                    </td>
+                    <td class="whitespace-nowrap font-normal px-2 py-4">
+                      24 March 2024
+                    </td>
+                    <td class="whitespace-nowrap font-semibold px-2 py-4">
+                      Rp46.400.000
+                    </td>
+                    <td class="whitespace-nowrap font-normal px-2 py-4">
+                      Scoot Airlines
+                    </td>
+                    <td class="whitespace-nowrap px-2 py-4">
+                      <div class="flex items-center">
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 ms-1 text-gray-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap px-2 py-4">
+                      <div class="flex items-center">
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 ms-1 text-gray-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap font-semibold px-2 py-4">
+                      9 Seat
+                    </td>
+                    <td class="whitespace-nowrap px-2 py-4">
+                      <button
+                        class="px-3 py-1 rounded bg-primary-50 text-white"
+                      >
+                        SELENGKAPNYA
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="border-b border-slate-500">
+                    <td class="whitespace-nowrap font-semibold px-2 py-4">
+                      Umroh Reguler 20 Hari 24 Maret
+                    </td>
+                    <td class="whitespace-nowrap font-normal px-2 py-4">
+                      24 March 2024
+                    </td>
+                    <td class="whitespace-nowrap font-semibold px-2 py-4">
+                      Rp46.400.000
+                    </td>
+                    <td class="whitespace-nowrap font-normal px-2 py-4">
+                      Scoot Airlines
+                    </td>
+                    <td class="whitespace-nowrap px-2 py-4">
+                      <div class="flex items-center">
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 ms-1 text-gray-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap px-2 py-4">
+                      <div class="flex items-center">
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300 ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 ms-1 text-gray-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap font-semibold px-2 py-4">
+                      9 Seat
+                    </td>
+                    <td class="whitespace-nowrap px-2 py-4">
+                      <button
+                        class="px-3 py-1 rounded bg-primary-50 text-white"
+                      >
+                        SELENGKAPNYA
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="paket-unggulan">
+        <div class="p-14 lg:p-14 xl:p-20 flex flex-col items-center justify-center">
+          <p class="text-3xl font-bold text-black text-center">
+            Paket perjalanan <span class="text-primary-50">unggulan kami.</span>
+          </p>
+          <p class="text-center text-lg font-normal text-[#858B91]">
+            Paket perjalanan unggulan yang paling diminati jama'ah
+          </p>
+          <div class="flex flex-wrap justify-center items-center gap-6 mt-8">
+            <div class="min-h-[540px] px-3 py-4 rounded-2xl shadow-md flex flex-col justify-between">
+              <div>
+                <img src="./assets/paket-1.png" class="h-40 w-full rounded-lg">
+                </img>
+                <div class="flex items-center justify-center gap-2 py-2 px-2 mx-4 rounded-b-[16px] shadow-md">
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-plane.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-hotel.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-car.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-human.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                </div>
+                <p class="text-2xl font-bold mt-4 mx-4">Paket Umroh VVIP</p>
+                <div class="flex items-center justify-between mt-1 mx-4">
+                  <p class="text-2xl font-semibold">Rp.38.500.000,-</p>
+                  <div class="flex items-center justify-between gap-2">
+                    <svg
+                      class="w-4 h-4 text-yellow-300 ms-1"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                      />
+                    </svg>
+                    <p class="text-lg font-medium">4.7</p>
+                  </div>
+                </div>
+                <p class="mx-4 mt-2 text-primary-50">Fasilitas yang didapat: </p>
+                <ul
+                  class="list-disc px-4 pb-4 mx-4 text-xs font-normal text-[#878787]"
+                >
+                  <li class="mt-2">Paket Umroh dengan 2 tour guide</li>
+                  <li class="mt-2">4x Makan dalam sehari</li>
+                  <li class="mt-2">Free obat-obatan</li>
+                  <li class="mt-2">4x Makan dalam sehari</li>
+                  <li class="mt-2">Free obat-obatan</li>
+                </ul>
+              </div>
+              <button class="bg-primary-50 w-full py-2 text-white font-medium rounded-xl">Ambil Paket</button>
+            </div>
+            <div class="min-h-[540px] px-3 py-4 rounded-2xl shadow-md flex flex-col justify-between">
+              <div>
+                <img src="./assets/paket-2.png" class="h-40 w-full rounded-lg">
+                </img>
+                <div class="flex items-center justify-center gap-2 py-2 px-2 mx-4 rounded-b-[16px] shadow-md">
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-plane.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-hotel.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-car.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-human.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                </div>
+                <p class="text-2xl font-bold mt-4 mx-4">Paket Umroh VVIP</p>
+                <div class="flex items-center justify-between mt-1 mx-4">
+                  <p class="text-2xl font-semibold">Rp.38.500.000,-</p>
+                  <div class="flex items-center justify-between gap-2">
+                    <svg
+                      class="w-4 h-4 text-yellow-300 ms-1"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                      />
+                    </svg>
+                    <p class="text-lg font-medium">4.7</p>
+                  </div>
+                </div>
+                <p class="mx-4 mt-2 text-primary-50">Fasilitas yang didapat: </p>
+                <ul
+                  class="list-disc px-4 pb-4 mx-4 text-xs font-normal text-[#878787]"
+                >
+                  <li class="mt-2">Paket Umroh dengan 2 tour guide</li>
+                  <li class="mt-2">4x Makan dalam sehari</li>
+                  <li class="mt-2">Free obat-obatan</li>
+                  <li class="mt-2">4x Makan dalam sehari</li>
+                  <li class="mt-2">Free obat-obatan</li>
+                </ul>
+              </div>
+              <button class="bg-primary-50 w-full py-2 text-white font-medium rounded-xl">Ambil Paket</button>
+            </div>
+            <div class="min-h-[540px] px-3 py-4 rounded-2xl shadow-md flex flex-col justify-between">
+              <div>
+                <img src="./assets/paket-3.png" class="h-40 w-full rounded-lg">
+                </img>
+                <div class="flex items-center justify-center gap-2 py-2 px-2 mx-4 rounded-b-[16px] shadow-md">
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-plane.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-hotel.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-car.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-human.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                </div>
+                <p class="text-2xl font-bold mt-4 mx-4">Paket Umroh VVIP</p>
+                <div class="flex items-center justify-between mt-1 mx-4">
+                  <p class="text-2xl font-semibold">Rp.38.500.000,-</p>
+                  <div class="flex items-center justify-between gap-2">
+                    <svg
+                      class="w-4 h-4 text-yellow-300 ms-1"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                      />
+                    </svg>
+                    <p class="text-lg font-medium">4.7</p>
+                  </div>
+                </div>
+                <p class="mx-4 mt-2 text-primary-50">Fasilitas yang didapat: </p>
+                <ul
+                  class="list-disc px-4 pb-4 mx-4 text-xs font-normal text-[#878787]"
+                >
+                  <li class="mt-2">Paket Umroh dengan 2 tour guide</li>
+                  <li class="mt-2">4x Makan dalam sehari</li>
+                  <li class="mt-2">4x Makan dalam sehari</li>
+                  <li class="mt-2">Free obat-obatan</li>
+                </ul>
+              </div>
+              <button class="bg-primary-50 w-full py-2 text-white font-medium rounded-xl">Ambil Paket</button>
+            </div>
+            <div class="min-h-[540px] px-3 py-4 rounded-2xl shadow-md flex flex-col justify-between">
+              <div>
+                <img src="./assets/paket-4.png" class="h-40 w-full rounded-lg">
+                </img>
+                <div class="flex items-center justify-center gap-2 py-2 px-2 mx-4 rounded-b-[16px] shadow-md">
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-plane.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-hotel.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-car.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <img src="./assets/paket-icon-human.svg" alt="paket-icon">
+                    <p
+                      class="text-[9px] font-light text-[#878787] text-center mt-1"
+                      style="line-height: 10px"
+                    >
+                      3 Tiket Pesawat
+                    </p>
+                  </div>
+                </div>
+                <p class="text-2xl font-bold mt-4 mx-4">Paket Umroh VVIP</p>
+                <div class="flex items-center justify-between mt-1 mx-4">
+                  <p class="text-2xl font-semibold">Rp.38.500.000,-</p>
+                  <div class="flex items-center justify-between gap-2">
+                    <svg
+                      class="w-4 h-4 text-yellow-300 ms-1"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                      />
+                    </svg>
+                    <p class="text-lg font-medium">4.7</p>
+                  </div>
+                </div>
+                <p class="mx-4 mt-2 text-primary-50">Fasilitas yang didapat: </p>
+                <ul
+                  class="list-disc px-4 pb-4 mx-4 text-xs font-normal text-[#878787]"
+                >
+                  <li class="mt-2">Paket Umroh dengan 2 tour guide</li>
+                  <li class="mt-2">4x Makan dalam sehari</li>
+                  <li class="mt-2">Free obat-obatan</li>
+                </ul>
+              </div>
+              <button class="bg-primary-50 w-full py-2 text-white font-medium rounded-xl">Ambil Paket</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="galeri">
+        <div class="p-20 flex flex-col items-center justify-center">
+          <p class="text-3xl font-bold text-black text-center">
+            Galeri foto <span class="text-primary-50">terbaru jama'ah.</span>
+          </p>
+          <p class="text-center text-lg font-normal text-[#858B91]">
+            Foto-foto jama'ah selama kegiatan bersama Sundra Wisata
+          </p>
+          <div class="columns-1 md:columns-2 xl:columns-3 gap-4 mt-8">
+            <div class="break-inside-avoid mb-4">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="./assets/gallery-1.png"
+                alt="Gallery image"
+              />
+            </div>
+            <div class="break-inside-avoid mb-4">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="./assets/gallery-2.png"
+                alt="Gallery image"
+              />
+            </div>
+            <div class="break-inside-avoid mb-4">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="./assets/gallery-3.png"
+                alt="Gallery image"
+              />
+            </div>
+            <div class="break-inside-avoid mb-4">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="./assets/gallery-4.png"
+                alt="Gallery image"
+              />
+            </div>
+            <div class="break-inside-avoid mb-4">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="./assets/gallery-5.png"
+                alt="Gallery image"
+              />
+            </div>
+            <div class="break-inside-avoid mb-4">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="./assets/gallery-6.png"
+                alt="Gallery image"
+              />
+            </div>
+          </div>
+          <button
+            class="w-full py-3 bg-slate-300 mt-4 text-base font-semibold text-[#606060] rounded-lg"
+          >
+            Lihat Lainnya >
+          </button>
+        </div>
+      </section>
+      <section id="testimonials">
+        <div class="relative p-20 flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/video-bg.jpg');">
+          <div class="absolute inset-0 bg-white opacity-75"></div>
+          <p class="relative text-3xl font-bold text-black text-center z-10">
+            Testimonials <span class="text-primary-50">dari jama'ah.</span>
+          </p>
+          <div class="relative flex items-center justify-center w-[65vw] h-[70vh] mt-8 z-10">
+            <iframe id="video-frame"
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/PpneDa0oQR4?si=OMT8TyAMCH5VZWDq"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="relative flex justify-center mt-4 z-10">
+            <span class="dot cursor-pointer w-2 h-2 md:w-3 md:h-3 rounded-full bg-white mx-1" onclick="currentSlide(0)"></span>
+            <span class="dot cursor-pointer w-2 h-2 md:w-3 md:h-3 rounded-full bg-white mx-1" onclick="currentSlide(1)"></span>
+            <span class="dot cursor-pointer w-2 h-2 md:w-3 md:h-3 rounded-full bg-white mx-1" onclick="currentSlide(2)"></span>
+          </div>
+        </div>
+      </section>
+      <section id="faq">
+        <div class="p-20 flex flex-col items-center justify-center">
+          <p class="text-3xl font-bold text-black text-center">
+            Pertanyaan paling
+            <span class="text-primary-50">sering diajukan.</span>
+          </p>
+          <p class="text-center text-lg font-normal text-[#858B91] mt-2">FAQ</p>
+          <div class="flex flex-col md:flex-row justify-start w-full gap-9 mt-8">
+            <div class="w-full md:w-1/3">
+              <p class="text-2xl font-bold">
+                Apakah Anda memiliki pertanyaan? Silakan tanyakan di sini, kami
+                siap membantu
+              </p>
+              <p class="text-base font-normal text-[#343D48]">
+                Jika pertanyaan Anda tidak tercantum di sini, silakan ajukan
+                pertanyaan manual.
+              </p>
+              <button
+                class="bg-primary-50 text-base font-medium text-white px-6 py-2 rounded-md mt-4"
+              >
+                Ajukan Disini
+              </button>
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col gap-2">
+              <div class="border border-gray-200">
+                <p
+                  class="cursor-pointer w-full text-base font-medium py-3 px-6 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  onclick="toggleAccordion('section1')"
+                >
+                  Apakah biyaya yang dibayarkan sudah termasuk penginapan?
+                </p>
+                <div id="section1" class="accordion-content hidden">
+                  <p class="py-3 px-6 text-base font-normal text-[#343D48]">
+                    Biaya penginapan tergantung pada paket yang Anda pilih.
+                    Apabila Anda memilih paket yang sudah termasuk penginapan,
+                    Anda tidak perlu membayar biaya sewa penginapan tambahan.
+                    Namun, jika Anda memilih paket tanpa penginapan, Anda dapat
+                    membayar penginapan kepada kami atau mencari penginapan
+                    sendiri.
+                  </p>
+                </div>
+              </div>
+              <div class="border border-gray-200">
+                <p
+                  class="cursor-pointer w-full text-base font-medium py-3 px-6 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  onclick="toggleAccordion('section2')"
+                >
+                  Berapa kali kami mendapatkan konsumsi dalam satu hari?
+                </p>
+                <div id="section2" class="accordion-content hidden">
+                  <p class="py-3 px-6 text-base font-normal text-[#343D48]">
+                    Biaya penginapan tergantung pada paket yang Anda pilih.
+                    Apabila Anda memilih paket yang sudah termasuk penginapan,
+                    Anda tidak perlu membayar biaya sewa penginapan tambahan.
+                    Namun, jika Anda memilih paket tanpa penginapan, Anda dapat
+                    membayar penginapan kepada kami atau mencari penginapan
+                    sendiri.
+                  </p>
+                </div>
+              </div>
+              <div class="border border-gray-200">
+                <p
+                  class="cursor-pointer w-full text-base font-medium py-3 px-6 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  onclick="toggleAccordion('section3')"
+                >
+                  Apakah kami bisa request makanan yang kami peroleh?
+                </p>
+                <div id="section3" class="accordion-content hidden">
+                  <p class="py-3 px-6 text-base font-normal text-[#343D48]">
+                    Biaya penginapan tergantung pada paket yang Anda pilih.
+                    Apabila Anda memilih paket yang sudah termasuk penginapan,
+                    Anda tidak perlu membayar biaya sewa penginapan tambahan.
+                    Namun, jika Anda memilih paket tanpa penginapan, Anda dapat
+                    membayar penginapan kepada kami atau mencari penginapan
+                    sendiri.
+                  </p>
+                </div>
+              </div>
+              <div class="border border-gray-200">
+                <p
+                  class="cursor-pointer w-full text-base font-medium py-3 px-6 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  onclick="toggleAccordion('section3')"
+                >
+                  Berapa leader tour yang akan menemani selama perjalanan?
+                </p>
+                <div id="section4" class="accordion-content hidden">
+                  <p class="py-3 px-6 text-base font-normal text-[#343D48]">
+                    Biaya penginapan tergantung pada paket yang Anda pilih.
+                    Apabila Anda memilih paket yang sudah termasuk penginapan,
+                    Anda tidak perlu membayar biaya sewa penginapan tambahan.
+                    Namun, jika Anda memilih paket tanpa penginapan, Anda dapat
+                    membayar penginapan kepada kami atau mencari penginapan
+                    sendiri.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer id="contact-us" class="bg-primary-70 text-white">
+        <div
+          class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-16"
+        >
+          <div
+            class="flex flex-col gap-8 md:gap-0 md:flex-row flex-wrap justify-between"
+          >
+            <div>
+              <img src="./assets/logo-footer.svg" alt="logo-footer" />
+              <p class="mt-4 max-w-xs text-justify">
+                Sundra Wisata adalah salah satu unit bisnis yang dimiliki oleh
+                Pon. Pes. Sunan Drajat Lamongan yang bergerak dalam bidang jasa
+                pelayanan Ibadah Umroh & Haji serta Wisata Dalam & Luar Negeri
+              </p>
+            </div>
+            <div
+              class="grid grid-cols-1 gap-y-8 gap-x-24 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3"
+            >
+              <div>
+                <p class="font-medium">Useful links</p>
+
+                <ul class="mt-6 space-y-4 text-sm">
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Pricing</a>
+                  </li>
+
+                  <li>
+                    <a href="register.html">Get Started</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <p class="font-medium">Company</p>
+
+                <ul class="mt-6 space-y-4 text-sm">
+                  <li>
+                    <a href="contact-us.html">Contact Us</a>
+                  </li>
+
+                  <li>
+                    <a href="about.html">About Us</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Career</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <p class="font-medium">Help</p>
+
+                <ul class="mt-6 space-y-4 text-sm">
+                  <li>
+                    <a href="#">Help Support</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Privacy Policy</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Terms of Use</a>
+                  </li>
+
+                  <li>
+                    <a href="#">FAQ</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs">&copy; CV Teknologi Sunan Drajat Copyright 2024</p>
+        </div>
+      </footer>
+    </main>
+    <script>
+      // ACCORDION
+      function toggleAccordion(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.classList.toggle("hidden");
+      }
+
+      // HIDDEN NAVBAR
+      const navLinks = document.querySelector('.nav-links')
+      const menuIcon = document.querySelector('.nav-icon');
+      const buttonsContainer = document.querySelector('.md\\:hidden');
+          function onToggleMenu(e){
+              e.name = e.name === 'menu' ? 'close' : 'menu'
+              navLinks.classList.toggle('top-[15%]')
+              navLinks.classList.toggle('bg-transparent', e.name === 'menu');
+              navLinks.classList.toggle('text-white', e.name === 'menu');
+              navLinks.classList.toggle('bg-white', e.name === 'close');
+              navLinks.classList.toggle('text-[#1f5c88]', e.name === 'close');
+              buttonsContainer.classList.toggle('hidden', e.name === 'menu');
+              if (e.name === 'close') {
+                menuIcon.src = './assets/nav-close.svg';
+              } else {
+                menuIcon.src = './assets/nav-open.svg';
+              }
+          }
+
+      // CAROUSEL
+      const videos = [
+        "https://www.youtube.com/embed/PpneDa0oQR4?si=OMT8TyAMCH5VZWDq",
+        "https://www.youtube.com/embed/-Y0UXsmSmGY?si=KllYx1yx2Cxvxlqr",
+        "https://www.youtube.com/embed/wOHNXVENpX8?si=Uk0VIknlB8lhiHeL"
+      ];
+
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        const iframe = document.getElementById('video-frame');
+        const dots = document.getElementsByClassName('dot');
+
+        if (index >= videos.length) {
+          currentIndex = 0;
+        } else if (index < 0) {
+          currentIndex = videos.length - 1;
+        } else {
+          currentIndex = index;
+        }
+
+        iframe.src = videos[currentIndex];
+
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(' active', '');
+        }
+        dots[currentIndex].className += ' active';
+      }
+
+      function currentSlide(index) {
+        showSlide(index);
+      }
+
+      showSlide(currentIndex);
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const trigger = document.getElementById('visi-misi-trigger');
+          const dropdown = document.getElementById('visi-misi-dropdown');
+
+          trigger.addEventListener('click', function () {
+              dropdown.classList.toggle('hidden');
+          });
+
+          // Hide dropdown when clicking outside
+          document.addEventListener('click', function (event) {
+              const isClickInside = trigger.contains(event.target) || dropdown.contains(event.target);
+              if (!isClickInside) {
+                  dropdown.classList.add('hidden');
+              }
+          });
+      });
+    </script>
+  </body>
+</html>
