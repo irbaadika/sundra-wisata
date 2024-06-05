@@ -120,8 +120,10 @@
       </section>
       <section id="form">
         <div class="p-10 md:p-20">
-          <div class="flex flex-wrap items-center justify-between gap-4">
-            <div class="flex flex-col gap-1">
+          <div
+            class="w-full flex flex-wrap md:flex-nowrap items-center justify-between gap-4"
+          >
+            <div class="w-full md:w-1/2 flex flex-col gap-1">
               <label for="first_name" class="text-xs font-medium"
                 >Nama depan</label
               >
@@ -129,11 +131,11 @@
                 id="first_name"
                 name="first_name"
                 type="text"
-                class="min-w-[400px] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                class="w-full px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
                 placeholder="Masukkan nama depan"
               />
             </div>
-            <div class="flex flex-col gap-1">
+            <div class="w-full md:w-1/2 flex flex-col gap-1">
               <label for="last_name" class="text-xs font-medium"
                 >Nama belakang</label
               >
@@ -141,32 +143,34 @@
                 id="last_name"
                 name="last_name"
                 type="text"
-                class="min-w-[400px] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                class="w-full px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
                 placeholder="Masukkan nama belakang"
               />
             </div>
           </div>
-          <div class="flex flex-wrap items-center justify-between gap-4 mt-4">
-            <div class="flex flex-col gap-1">
+          <div
+            class="w-full flex flex-wrap md:flex-nowrap items-center justify-between gap-4 mt-4"
+          >
+            <div class="w-full md:w-1/2 flex flex-col gap-1">
               <label for="email" class="text-xs font-medium">Email</label>
               <input
                 id="email"
                 name="email"
                 type="email"
-                class="min-w-[400px] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                class="w-full px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
                 placeholder="Masukkan email"
               />
             </div>
-            <div class="flex flex-col gap-1 mt-4">
+            <div class="w-full md:w-1/2 flex flex-col gap-1">
               <label for="country_code" class="text-xs font-medium"
                 >Nomor Handphone</label
               >
-              <div class="flex items-center min-w-[400px] w-[400px] gap-1">
+              <div class="flex items-center w-full gap-1">
                 <select
                   id="country_code"
                   name="country_code"
                   type="text"
-                  class="w-[20%] px-4 py-2 text-sm bg-neutral-50 appearance-none border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                  class="w-20 px-4 py-2 text-sm bg-neutral-50 appearance-none border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
                   placeholder="+62"
                 >
                   <option value="+62" selected>+62</option>
@@ -184,7 +188,7 @@
                   id="no_hp"
                   name="no_hp"
                   type="text"
-                  class="w-[80%] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                  class="w-full px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
                   placeholder="Masukkan nomor handphone"
                 />
               </div>
@@ -196,7 +200,7 @@
               id="subject"
               name="subject"
               type="text"
-              class="min-w-[400px] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+              class="w-full px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
               placeholder="Masukkan subject"
             />
           </div>
@@ -205,7 +209,7 @@
             <textarea
               id="pesan"
               name="pesan"
-              class="min-w-[400px] min-h-32 px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+              class="w-full min-h-32 px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
               placeholder="Masukkan pesan"
             ></textarea>
           </div>

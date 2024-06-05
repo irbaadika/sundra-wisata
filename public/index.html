@@ -18,20 +18,20 @@
               />
             </div>
             <div
-              class="nav-links duration-500 md:static absolute md:min-h-fit min-h-full left-0 top-[-100%] md:w-auto w-full flex flex-col md:flex-row items-start md:items-center px-5 text-white"
+              class="nav-links duration-500 md:static absolute md:min-h-fit min-h-screen left-0 top-[-100%] md:w-auto w-full flex flex-col md:flex-row items-start md:items-center px-5 text-white"
             >
               <ul
-                class="flex flex-col md:flex-row md:justify-center md:items-center md:gap-[4vw] pt-8 md:pt-0 gap-8 text-center mx-auto"
+                class="flex flex-col md:flex-row md:justify-center md:items-center md:gap-[4vw] gap-8 text-center mx-auto my-auto"
               >
                 <li>
-                  <a class="font-bold md:font-normal" href="index.html">Home</a>
+                  <a class="text-lg md:text-base font-bold md:font-normal" href="index.html">Home</a>
                 </li>
                 <li>
-                  <a class="font-bold md:font-normal" href="about.html"
+                  <a class="text-lg md:text-base font-bold md:font-normal" href="about.html"
                     >About</a
                   >
                 </li>
-                <li class="relative">
+                <!-- <li class="relative">
                   <p
                     id="visi-misi-trigger"
                     class="cursor-pointer font-bold md:font-normal"
@@ -55,23 +55,16 @@
                       >
                     </div>
                   </div>
-                </li>
+                </li> -->
                 <li>
-                  <a class="font-bold md:font-normal" href="contact-us.html"
+                  <a class="text-lg md:text-base font-bold md:font-normal" href="contact-us.html"
                     >Kontak Kami</a
                   >
                 </li>
                 <div class="md:hidden flex flex-col gap-4 mt-4">
-                  <a href="register.html">
-                    <button
-                      class="bg-primary-50 text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-primary-70"
-                    >
-                      Daftar
-                    </button>
-                  </a>
                   <a href="login.html">
                     <button
-                      class="bg-primary-50 text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-white hover:text-primary-50"
+                      class="bg-primary-50 text-lg md:text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-white hover:text-primary-50"
                     >
                       Login Akun
                     </button>
@@ -80,11 +73,13 @@
               </ul>
             </div>
             <div class="hidden md:flex items-center justify-end gap-2 md:gap-6">
-              <button
-                class="text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-primary-50"
-              >
-                Daftar
-              </button>
+              <a href="register.html">
+                <button
+                  class="text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-primary-50"
+                >
+                  Daftar
+                </button>
+              </a>
               <a href="login.html"
                 ><button
                   class="bg-primary-50 text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-white hover:text-primary-50"
@@ -93,12 +88,14 @@
                 </button></a
               >
             </div>
-            <img
-              src="./assets/nav-open.svg"
-              onclick="onToggleMenu(this)"
-              name="menu"
-              class="text-white w-7 h-7 cursor-pointer md:hidden nav-icon"
-            />
+            <div class="flex items-center gap-2 md:hidden">
+              <a href="register.html">
+                <button class="text-lg font-medium text-white px-4 py-3 rounded-full hover:bg-primary-50 mr-2">
+                  Daftar
+                </button>
+              </a>
+              <img src="./assets/nav-open.svg" onclick="onToggleMenu(this)" name="menu" class="text-white w-7 h-7 cursor-pointer md:hidden nav-icon" />
+            </div>
           </nav>
         </header>
         <div class="w-full flex flex-col items-center justify-end mt-12 md:mt-32 lg:mt-40 xl:mt-52 2xl:mt-96 pb-8">
@@ -164,7 +161,7 @@
                 </select>
               </div>
             </div>
-            <div class="cursor-pointer bg-primary-50 w-full h-8 sm:w-12 sm:h-12 mt-2 sm:mt-0 rounded flex items-center justify-center">
+            <div class="cursor-pointer bg-primary-50 w-full h-8 sm:w-8 sm:h-8 lg:w-12 lg:h-12 mt-2 sm:mt-0 rounded flex items-center justify-center">
               <img src="./assets/hero-search-icon.svg" alt="hero-search-icon">
             </div>
           </div>
@@ -204,7 +201,7 @@
       <section id="tentang-kami">
         <div class="p-20">
           <div class="flex flex-col md:flex-row w-full items-center justify-center">
-            <div class="w-full md:w-1/2 text-justify">
+            <div class="w-full md:w-1/2 text-justify pr-4">
               <p class="text-5xl font-semibold text-black">Tentang Kami</p>
               <p class="text-5xl font-semibold text-primary-50">
                 Sundra Wisata Travel.
@@ -223,9 +220,9 @@
             </div>
             <div class="hidden md:inline-block w-1/2 h-full">
               <div class="flex justify-end 2xl:pr-[17%] items-start">
-                <div class="relative rounded-md md:w-60 md:h-[366px] lg:w-72 lg:h-[403px] xl:w-80 xl:h-[488px] bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/about-1.jpg')">
+                <div class="relative rounded-md md:w-52 md:h-[291px] lg:w-64 lg:h-[358px] xl:w-80 xl:h-[488px] bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/about-1.jpg')">
                   <div
-                    class="absolute rounded-md md:w-60 md:h-[366px] lg:w-72 lg:h-[403px] xl:w-80 xl:h-[488px] border-8 border-white top-1/3 -left-1/2 bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/about-2.jpg')"
+                    class="absolute rounded-md md:w-52 md:h-[291px] lg:w-64 lg:h-[358px] xl:w-80 xl:h-[488px] border-8 border-white top-1/3 -left-1/2 bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/about-2.jpg')"
                   >
                   </div>
                 </div>
@@ -233,7 +230,7 @@
             </div>
           </div>
           <div class="flex items-center justify-center md:inline-block">
-            <button class="mt-16 px-10 py-5 bg-primary-50 text-2xl font-normal text-white rounded-md">
+            <button class="mt-16 px-6 py-3 md:px-8 md:py-4 xl:px-10 xl:py-5 bg-primary-50 text-2xl font-normal text-white rounded-md">
               Hubungi Kami
             </button>
           </div>
@@ -1364,14 +1361,14 @@
       </section>
       <footer id="contact-us" class="bg-primary-70 text-white">
         <div
-          class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-16"
+          class="w-full space-y-8 p-10 sm:px-6 lg:space-y-16 lg:px-16"
         >
           <div
             class="flex flex-col gap-8 md:gap-0 md:flex-row flex-wrap justify-between"
           >
             <div>
               <img src="./assets/logo-footer.svg" alt="logo-footer" />
-              <p class="mt-4 max-w-xs text-justify">
+              <p class="mt-4 max-w-md text-justify">
                 Sundra Wisata adalah salah satu unit bisnis yang dimiliki oleh
                 Pon. Pes. Sunan Drajat Lamongan yang bergerak dalam bidang jasa
                 pelayanan Ibadah Umroh & Haji serta Wisata Dalam & Luar Negeri
@@ -1454,20 +1451,22 @@
       const navLinks = document.querySelector('.nav-links')
       const menuIcon = document.querySelector('.nav-icon');
       const buttonsContainer = document.querySelector('.md\\:hidden');
-          function onToggleMenu(e){
-              e.name = e.name === 'menu' ? 'close' : 'menu'
-              navLinks.classList.toggle('top-[15%]')
-              navLinks.classList.toggle('bg-transparent', e.name === 'menu');
-              navLinks.classList.toggle('text-white', e.name === 'menu');
-              navLinks.classList.toggle('bg-white', e.name === 'close');
-              navLinks.classList.toggle('text-[#1f5c88]', e.name === 'close');
-              buttonsContainer.classList.toggle('hidden', e.name === 'menu');
-              if (e.name === 'close') {
-                menuIcon.src = './assets/nav-close.svg';
-              } else {
-                menuIcon.src = './assets/nav-open.svg';
-              }
-          }
+      
+      function onToggleMenu(e) {
+        e.name = e.name === 'menu' ? 'close' : 'menu'
+        navLinks.classList.toggle('top-[15%]')
+        navLinks.classList.toggle('bg-transparent', e.name === 'menu');
+        navLinks.classList.toggle('text-white', e.name === 'menu');
+        navLinks.classList.toggle('bg-white', e.name === 'close');
+        navLinks.classList.toggle('text-[#1f5c88]', e.name === 'close');
+        buttonsContainer.classList.toggle('hidden', e.name === 'menu');
+        
+        if (e.name === 'close') {
+          menuIcon.src = './assets/nav-close.svg';
+        } else {
+          menuIcon.src = './assets/nav-open.svg';
+        }
+      }
 
       // CAROUSEL
       const videos = [
@@ -1504,7 +1503,8 @@
 
       showSlide(currentIndex);
     </script>
-    <script>
+    <!-- visi misi -->
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", function () {
           const trigger = document.getElementById('visi-misi-trigger');
           const dropdown = document.getElementById('visi-misi-dropdown');
@@ -1521,6 +1521,6 @@
               }
           });
       });
-    </script>
+    </script> -->
   </body>
 </html>
