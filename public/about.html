@@ -22,20 +22,26 @@
               />
             </div>
             <div
-              class="nav-links duration-500 md:static absolute md:min-h-fit min-h-full left-0 top-[-100%] md:w-auto w-full flex flex-col md:flex-row items-start md:items-center px-5 text-white"
+              class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[85vh] left-0 top-[-100%] md:w-auto w-full flex flex-col md:flex-row items-start md:items-center px-5 text-white"
             >
               <ul
-                class="flex flex-col md:flex-row md:justify-center md:items-center md:gap-[4vw] pt-8 md:pt-0 gap-8 text-center mx-auto"
+                class="flex flex-col md:flex-row md:justify-center md:items-center md:gap-[4vw] gap-8 text-center mx-auto my-auto"
               >
                 <li>
-                  <a class="font-bold md:font-normal" href="index.html">Home</a>
+                  <a
+                    class="text-lg md:text-base font-bold md:font-normal"
+                    href="index.html"
+                    >Home</a
+                  >
                 </li>
                 <li>
-                  <a class="font-bold md:font-normal" href="about.html"
+                  <a
+                    class="text-lg md:text-base font-bold md:font-normal"
+                    href="about.html"
                     >About</a
                   >
                 </li>
-                <li class="relative">
+                <!-- <li class="relative">
                   <p
                     id="visi-misi-trigger"
                     class="cursor-pointer font-bold md:font-normal"
@@ -59,23 +65,18 @@
                       >
                     </div>
                   </div>
-                </li>
+                </li> -->
                 <li>
-                  <a class="font-bold md:font-normal" href="contact-us.html"
+                  <a
+                    class="text-lg md:text-base font-bold md:font-normal"
+                    href="contact-us.html"
                     >Kontak Kami</a
                   >
                 </li>
                 <div class="md:hidden flex flex-col gap-4 mt-4">
-                  <a href="register.html">
-                    <button
-                      class="bg-primary-50 text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-primary-70"
-                    >
-                      Daftar
-                    </button>
-                  </a>
                   <a href="login.html">
                     <button
-                      class="bg-primary-50 text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-white hover:text-primary-50"
+                      class="bg-primary-50 text-lg md:text-sm font-medium text-white px-4 py-3 rounded-full hover:bg-white hover:text-primary-50"
                     >
                       Login Akun
                     </button>
@@ -99,19 +100,28 @@
                 </button></a
               >
             </div>
-            <img
-              src="./assets/nav-open.svg"
-              onclick="onToggleMenu(this)"
-              name="menu"
-              class="text-white w-7 h-7 cursor-pointer md:hidden nav-icon"
-            />
+            <div class="flex items-center gap-2 md:hidden">
+              <a href="register.html">
+                <button
+                  class="text-lg font-medium text-white px-4 py-3 rounded-full hover:bg-primary-50 mr-2"
+                >
+                  Daftar
+                </button>
+              </a>
+              <img
+                src="./assets/nav-open.svg"
+                onclick="onToggleMenu(this)"
+                name="menu"
+                class="text-white w-7 h-7 cursor-pointer md:hidden nav-icon"
+              />
+            </div>
           </nav>
         </header>
         <div
-          class="w-full mt-12 md:mt-24 lg:mt-32 xl:mt-48 2xl:mt-64 pb-8 px-12 md:px-32 lg:px-64 text-center"
+          class="w-full mt-12 md:mt-24 lg:mt-32 xl:mt-48 2xl:mt-64 pb-8 px-4 md:px-32 lg:px-64 text-center"
         >
           <h2 class="text-4xl font-bold text-white">About Us</h2>
-          <p class="text-base font-normal text-white px-16">
+          <p class="text-base font-normal text-white px-6 md:px-16 mt-8">
             Jangan pernah ragu untuk memenuhi panggilan suci ke Baitullah.
             Karena setiap langkah menuju tanah suci adalah langkah menuju
             ampunan dan keberkahan
@@ -119,7 +129,7 @@
         </div>
       </section>
       <section id="tentang-kami">
-        <div class="p-20">
+        <div class="p-10 md:p-20">
           <div
             class="flex flex-col md:flex-row w-full items-center justify-center"
           >
@@ -161,7 +171,7 @@
           </div>
           <div class="flex items-center justify-center md:inline-block">
             <button
-              class="mt-16 px-10 py-5 bg-primary-50 text-2xl font-normal text-white rounded-md"
+              class="mt-16 px-6 py-3 md:px-8 md:py-4 xl:px-10 xl:py-5 bg-primary-50 text-2xl font-normal text-white rounded-md"
             >
               Hubungi Kami
             </button>
@@ -383,7 +393,7 @@
 
       showSlide(currentIndex);
     </script>
-    <script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", function () {
         const trigger = document.getElementById("visi-misi-trigger");
         const dropdown = document.getElementById("visi-misi-dropdown");
@@ -401,6 +411,6 @@
           }
         });
       });
-    </script>
+    </script> -->
   </body>
 </html>

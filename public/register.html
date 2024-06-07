@@ -17,7 +17,7 @@
           style="background-image: url('./assets/login-bg.png')"
         ></div>
         <div
-          class="w-full lg:w-1/2 xl:w-[45%] flex flex-col items-center justify-center my-20"
+          class="w-full lg:w-1/2 xl:w-[45%] flex flex-col items-center justify-center my-20 px-10"
         >
           <p class="text-2xl font-bold text-black">
             Selamat Datang di <span class="text-primary-50">Sundra Wisata</span>
@@ -25,7 +25,7 @@
           <p class="text-lg font-light text-neutral-80 mt-2">
             Masuk dan pilih paket yang anda inginkan
           </p>
-          <div>
+          <div class="w-full">
             <div class="flex flex-col gap-1 mt-4">
               <label for="full_name" class="text-xs font-medium"
                 >Nama Lengkap</label
@@ -34,7 +34,7 @@
                 id="full_name"
                 name="full_name"
                 type="text"
-                class="min-w-[400px] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                class="w-full px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
                 placeholder="Masukkan nama lengkap"
               />
             </div>
@@ -46,7 +46,7 @@
                 id="tanggal_lahir"
                 name="tanggal_lahir"
                 type="text"
-                class="min-w-[400px] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                class="w-full px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
                 placeholder="Masukkan tanggal lahir"
                 onfocus="(this.type='date')"
                 onblur="if(!this.value) this.type='text'"
@@ -60,7 +60,7 @@
                 id="tempat_lahir"
                 name="tempat_lahir"
                 type="text"
-                class="min-w-[400px] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                class="w-full px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
                 placeholder="Masukkan tempat lahir"
               />
             </div>
@@ -70,7 +70,7 @@
                 id="no_ktp"
                 name="no_ktp"
                 type="text"
-                class="min-w-[400px] px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
+                class="w-full px-4 py-2 text-sm bg-neutral-50 border border-neutral-60 rounded-md focus:outline-none focus:border-neutral-80"
                 placeholder="Masukkan nomor KTP"
               />
             </div>
@@ -78,7 +78,7 @@
               <label for="no_hp" class="text-xs font-medium"
                 >Nomor Handphone</label
               >
-              <div class="flex items-center min-w-[400px] gap-1">
+              <div class="flex items-center w-full gap-1">
                 <select
                   id="country_code"
                   name="country_code"
@@ -102,7 +102,7 @@
             <div class="flex flex-col gap-1 mt-4">
               <label for="password" class="text-xs font-medium">Password</label>
               <div
-                class="flex items-center min-w-[400px] px-4 py-2 bg-neutral-50 border border-neutral-60 rounded-md"
+                class="flex items-center w-full px-4 py-2 bg-neutral-50 border border-neutral-60 rounded-md"
               >
                 <input
                   id="password"
@@ -125,7 +125,7 @@
                 >Password confirmation</label
               >
               <div
-                class="flex items-center min-w-[400px] px-4 py-2 bg-neutral-50 border border-neutral-60 rounded-md"
+                class="flex items-center w-full px-4 py-2 bg-neutral-50 border border-neutral-60 rounded-md"
               >
                 <input
                   id="password_confirmation"
